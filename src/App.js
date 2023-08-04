@@ -9,7 +9,7 @@ import { Route, Routes, useLocation, useSearchParams } from "react-router-dom";
 export default function App() {
   const { fetchBlogPosts } = useContext(AppContext);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const location = useLocation(AppContext);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function App() {
     else {
       fetchBlogPosts(Number(page)); 
     }
-
+    // eslint-disable-next-line 
   }, [location.pathname, location.search]);
 
   return (

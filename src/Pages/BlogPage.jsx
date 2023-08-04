@@ -37,6 +37,7 @@ const BlogPage = () => {
         if(blogId) {
             fetchRelatedBlogs();
         }
+        // eslint-disable-next-line
     }, [location.pathname])
 
   return (
